@@ -1,0 +1,68 @@
+/* by default page size css */
+.container_main_box {
+    min-height: 400px;
+}
+
+
+/* Loading state styling */
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+  }
+  
+  /* No contacts message styling */
+  .no-contacts {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+  }
+  
+  /* Contact list table styling */
+  .contact-list {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .contact-list th,
+  .contact-list td {
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+  
+  .contact-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .contact-list tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d32f2f;
+  }
+
+  /* for button color from red to green color csss */
+  .reply-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d32f2f; /* Initial blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .reply-btn:active {
+    background-color: green; /* Color change when clicked */
+  }
+  
+  

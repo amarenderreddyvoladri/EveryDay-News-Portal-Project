@@ -1,0 +1,37 @@
+.table {
+    background-color: #f8f9fa;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table th {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  .table td {
+    vertical-align: middle;
+  }
+  
+  .btn {
+    font-size: 14px;
+    border-radius: 5px;
+  }
+
+  .btns-td{
+    width: 100px;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border: none;
+  }
+  
+  .m-5 {
+    margin: 2rem;
+  }
+  
