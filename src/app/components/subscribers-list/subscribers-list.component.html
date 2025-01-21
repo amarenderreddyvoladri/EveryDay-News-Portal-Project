@@ -1,0 +1,29 @@
+<!-- <p>subscriber-list works!</p> -->
+
+<div class="m-5">
+  <table class="table table-bordered table-striped text-center align-middle">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of subscribers">
+        <td>{{ s.id }}</td>
+        <td>{{ s.email }}</td>
+        <td class="d-flex justify-content-center align-items-center">
+          <button class="btn btn-danger p-2 w-25 me-3" (click)="removeSubscriber(s.id || 0)">Delete</button>
+        </td>
+      </tr>
+      <tr *ngIf="!subscribers || subscribers.length == 0">
+        <td colspan="3">No Subscribers Available!</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>

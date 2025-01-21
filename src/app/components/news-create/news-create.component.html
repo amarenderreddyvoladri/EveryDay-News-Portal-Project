@@ -1,0 +1,79 @@
+<div class="container m-5">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <form [formGroup]="newsFormGroup" (ngSubmit)="onSubmit()">
+          <div formGroupName="news">
+            <h2>Add New News Article</h2>
+            <hr />
+  
+            <!-- Category -->   
+            <div class="my-3">
+              <label class="form-label">Category:</label>
+              <select formControlName="newsCategory" class="form-control">
+                <option *ngFor="let category of newsCategories" [ngValue]="category">
+                  {{ category.categoryName }}
+                </option>
+              </select>
+              <div *ngIf="newsCategory?.invalid && (newsCategory?.touched || newsCategory?.dirty)" class="alert alert-danger">
+                <div *ngIf="newsCategory?.errors?.['required']">Category is required</div>
+              </div>
+            </div>
+
+                      <!-- Reporter Name -->
+          <div class="my-3">
+            <label class="form-label">Reporter Name:</label>
+            <input type="text" class="form-control" formControlName="reporter" />
+            <div *ngIf="reporter?.invalid && (reporter?.touched || reporter?.dirty)" class="alert alert-danger">
+              <div *ngIf="reporter?.errors?.['required']">Reporter Name is required</div>
+            </div>
+          </div>
+  
+            <!-- Headline -->
+            <div class="my-3">
+              <label class="form-label">Headline:</label>
+              <input type="text" class="form-control" formControlName="headline" />
+              <div *ngIf="headline?.invalid && (headline?.touched || headline?.dirty)" class="alert alert-danger">
+                <div *ngIf="headline?.errors?.['required']">Headline is required</div>
+              </div>
+            </div>
+  
+            <!-- Content -->
+            <div class="my-3">
+              <label class="form-label">Content:</label>
+              <textarea class="form-control" formControlName="content"></textarea>
+              <div *ngIf="content?.invalid && (content?.touched || content?.dirty)" class="alert alert-danger">
+                <div *ngIf="content?.errors?.['required']">Content is required</div>
+              </div>
+            </div>
+  
+            <!-- Image URL -->
+            <div class="my-3">
+              <label class="form-label">Image URL:</label>
+              <input type="text" class="form-control" formControlName="imageUrl" />
+              <div *ngIf="imageUrl?.invalid && (imageUrl?.touched || imageUrl?.dirty)" class="alert alert-danger">
+                <div *ngIf="imageUrl?.errors?.['required']">Image URL is required</div>
+              </div>
+            </div>
+  
+            <!-- Date -->
+            <div class="my-3">
+              <label class="form-label">Date:</label>
+              <input type="date" class="form-control" formControlName="date" />
+              <div *ngIf="date?.invalid && (date?.touched || date?.dirty)" class="alert alert-danger">
+                <div *ngIf="date?.errors?.['required']">Date is required</div>
+              </div>
+            </div>
+  
+          </div>
+  
+          <!-- Submit Button -->
+          <div class="d-grid">
+            <input type="submit" value="Add New News Article" class="btn btn-primary" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+  

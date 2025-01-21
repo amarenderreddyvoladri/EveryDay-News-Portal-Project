@@ -1,0 +1,18 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  thead {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
