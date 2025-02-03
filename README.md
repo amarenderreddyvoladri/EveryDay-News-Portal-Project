@@ -199,7 +199,7 @@ Online-News-Portal/
 
 ## Screenshots
 ### Home Page
-![Home Page Screenshot](https://via.placeholder.com/800x400?text=Home+Page)
+![Home Page Screenshot](src/assets/Screenshorts/homepage.jpg)
 ### News Categories
 ![News Categories Screenshot](https://via.placeholder.com/800x400?text=News+Categories)
 
