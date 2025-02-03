@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # NewsPortalProject
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
@@ -256,4 +255,3 @@ Contributions are welcome! Feel free to fork the repository and submit a pull re
 - [NewsAPI](https://newsapi.org/) for providing news data.
 - [Angular](https://angular.io/) for the frontend framework.
 - [Spring Boot](https://spring.io/projects/spring-boot) for the backend.
->>>>>>> 105f00f2b2efba77166493e3c05cb4a2270359ad
