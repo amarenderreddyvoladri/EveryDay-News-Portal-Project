@@ -1,0 +1,116 @@
+<div class="news-container">
+  <h1>Top News Articles</h1>
+
+  <!-- Filters -->
+  <form (ngSubmit)="applyFiltersGNews()" class="filter-form">
+    <!-- Input Field for Freeform Query -->
+    <label for="query">Search:</label>
+    <input id="query" [(ngModel)]="filtersGNews.query" name="query" placeholder="Enter a keyword" class="query-input" />
+
+    <!-- Select Dropdown for Predefined Categories -->
+    <label for="categorySelect">Or Choose a Category:</label>
+    <select id="categorySelect" [(ngModel)]="filtersGNews.query"  name="query" class="query-select">
+      <option value="">Select a Category</option>
+      <option value="general">General</option>
+      <option value="world">World</option>
+      <option value="nation">Nation</option>
+      <option value="business">Business</option>
+      <option value="technology">Technology</option>
+      <option value="entertainment">Entertainment</option>
+      <option value="sports">Sports</option>
+      <option value="science">Science</option>
+      <option value="health">Health</option>
+    </select>
+
+    <br><br>
+
+    <label for="lang">Language:</label>
+    <select id="lang" [(ngModel)]="filtersGNews.lang" name="lang" class="query-select">
+      <option value="ar">Arabic</option>
+      <option value="zh">Chinese</option>
+      <option value="nl">Dutch</option>
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="de">German</option>
+      <option value="el">Greek</option>
+      <option value="he">Hebrew</option>
+      <option value="hi">Hindi</option>
+      <option value="it">Italian</option>
+      <option value="ja">Japanese</option>
+      <option value="ml">Malayalam</option>
+      <option value="mr">Marathi</option>
+      <option value="no">Norwegian</option>
+      <option value="pt">Portuguese</option>
+      <option value="ro">Romanian</option>
+      <option value="ru">Russian</option>
+      <option value="es">Spanish</option>
+      <option value="sv">Swedish</option>
+      <option value="ta">Tamil</option>
+      <option value="te">Telugu</option>
+      <option value="uk">Ukrainian</option>
+    </select>
+
+    <label for="country">Country:</label>
+    <select id="country" [(ngModel)]="filtersGNews.country" name="country" class="query-select">
+      <option value="au">Australia</option>
+      <option value="br">Brazil</option>
+      <option value="ca">Canada</option>
+      <option value="cn">China</option>
+      <option value="eg">Egypt</option>
+      <option value="fr">France</option>
+      <option value="de">Germany</option>
+      <option value="gr">Greece</option>
+      <option value="hk">Hong Kong</option>
+      <option value="in">India</option>
+      <option value="ie">Ireland</option>
+      <option value="il">Israel</option>
+      <option value="it">Italy</option>
+      <option value="jp">Japan</option>
+      <option value="nl">Netherlands</option>
+      <option value="no">Norway</option>
+      <option value="pk">Pakistan</option>
+      <option value="pe">Peru</option>
+      <option value="ph">Philippines</option>
+      <option value="pt">Portugal</option>
+      <option value="ro">Romania</option>
+      <option value="ru">Russia</option>
+      <option value="sg">Singapore</option>
+      <option value="es">Spain</option>
+      <option value="se">Sweden</option>
+      <option value="ch">Switzerland</option>
+      <option value="tw">Taiwan</option>
+      <option value="ua">Ukraine</option>
+      <option value="gb">United Kingdom</option>
+      <option value="us">United States</option>
+    </select>
+
+    <label for="max">Max Results:</label>
+    <input id="max" [(ngModel)]="filtersGNews.max" name="max" type="number" min="1" />
+
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Error Message -->
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <!-- Error Message -->
+  <div *ngIf="error" class="error">
+    <p>{{ error }}</p>
+  </div>
+
+<!-- News Articles -->
+<div class="news-list" *ngIf="newsList.length > 0">
+  <div *ngFor="let article of newsList" class="news-item">
+    <img [src]="article.image" alt="{{ article.title }}" class="news-image" *ngIf="article.image" />
+    <h2 class="news-title">{{ article.title }}</h2>
+    <p class="news-description">
+      {{ article.description | slice: 0:150 }}...
+    </p>
+    <a [href]="article.url" target="_blank" class="read-more">Read More</a>
+  </div>
+</div>
+
+</div>
+
+
+<app-footer></app-footer>

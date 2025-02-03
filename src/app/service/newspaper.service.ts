@@ -1,0 +1,288 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class NewspaperService {
+
+  constructor() { }
+
+  // Method to get newspapers based on language 
+  getNewspapers() {
+    return {  
+
+      englishNewspapers: [
+        { name: 'Times of India', url: 'https://epaper.timesofindia.com/' },
+        { name: 'The Hindu', url: 'https://epaper.thehindu.com/' },
+        { name: 'Deccan Chronicle', url: 'https://epaper.deccanchronicle.com/' },
+        { name: 'Indian Express', url: 'https://epaper.indianexpress.com/' },
+        { name: 'Hindustan Times', url: 'https://epaper.hindustantimes.com/' },
+        { name: 'The Telegraph', url: 'https://epaper.telegraphindia.com/' },
+        { name: 'Dainik Bhaskar', url: 'https://epaper.dainikbhaskar.com/' },
+        { name: 'The Economic Times', url: 'https://epaper.economictimes.indiatimes.com/' },
+        { name: 'The New York Times', url: 'https://epaper.nytimes.com/' },
+        { name: 'USA Today', url: 'https://epaper.usatoday.com/' },
+        { name: 'The Guardian', url: 'https://epaper.theguardian.com/' },
+        { name: 'The Independent', url: 'https://epaper.independent.co.uk/' }
+      ],
+      teluguNewspapers: [
+        { name: 'Eenadu', url: 'https://epaper.eenadu.net/' },
+        { name: 'Sakshi', url: 'https://epaper.sakshi.com/' },
+        { name: 'Andhra Jyothy', url: 'https://epaper.andhrajyothy.com/' },
+        { name: 'V6 Velugu', url: 'https://epaper.v6velugu.com/' },
+        { name: 'Vaartha', url: 'https://epaper.vaartha.com/' },
+        { name: 'Namaste Telangana', url: 'https://epaper.ntnews.com/' },
+        { name: 'Surya', url: 'https://epaper.suryaa.com/' },
+        { name: 'Kasturi', url: 'https://epaper.kasturi.com/' },
+        { name: 'Andhra Prabha', url: 'https://epaper.andhraprabha.com/' },
+        { name: 'Mana Telangana', url: 'https://epaper.manalokam.com/' },
+        { name: 'Chandrika', url: 'https://epaper.chandrikatimes.com/' },
+        { name: 'Telugu Times', url: 'https://epaper.telugutimes.com/' }
+      ],
+      hindiNewspapers: [
+        { name: 'Navbharat Times', url: 'https://epaper.navbharattimes.indiatimes.com/' },
+        { name: 'Dainik Jagran', url: 'https://epaper.jagran.com/' },
+        { name: 'Amar Ujala', url: 'https://epaper.amarujala.com/' },
+        { name: 'Jansatta', url: 'https://epaper.jansatta.com/' },
+        { name: 'Hindustan', url: 'https://epaper.livehindustan.com/' },
+        { name: 'Patrika', url: 'https://epaper.patrika.com/' },
+        { name: 'Punjab Kesari', url: 'https://epaper.punjabkesari.in/' },
+        { name: 'Rajasthan Patrika', url: 'https://epaper.rajasthanpatrika.com/' },
+        { name: 'Times of India Hindi', url: 'https://epaper.timesofindia.com/' },
+        { name: 'Mahuaa', url: 'https://epaper.mahuaa.com/' },
+        { name: 'Khabar Samay', url: 'https://epaper.khabarsamay.com/' },
+        { name: 'Bhojpuria', url: 'https://epaper.bhojpuria.com/' }
+      ],
+      tamilNewspapers: [
+        { name: 'Daily Thanthi', url: 'https://epaper.dailythanthi.com/' },
+        { name: 'Dina Thanthi', url: 'https://epaper.dinathanthi.com/' },
+        { name: 'Dina Mani', url: 'https://epaper.dinamani.com/' },
+        { name: 'The Hindu Tamil', url: 'https://epaper.thehindu.com/' },
+        { name: 'Vikatan', url: 'https://epaper.vikatan.com/' },
+        { name: 'Ananda Vikatan', url: 'https://epaper.anandavikatan.com/' },
+        { name: 'Dinakaran', url: 'https://epaper.dinakaran.com/' },
+        { name: 'Malai Malar', url: 'https://epaper.malaimalar.com/' },
+        { name: 'Tamil Murasu', url: 'https://epaper.tamilmurasu.com/' },
+        { name: 'Pudhiya Thalaimurai', url: 'https://epaper.pudhiathalaimurai.com/' },
+        { name: 'Thuglak', url: 'https://epaper.thuglak.com/' },
+        { name: 'Kumudham', url: 'https://epaper.kumudham.com/' }
+      ],
+      // Add more languages and newspapers here as required.
+      malyalamNewspapers: [
+        { name: 'Mathrubhumi', url: 'https://epaper.mathrubhumi.com/' },
+        { name: 'Manorama', url: 'https://epaper.manoramaonline.com/' },
+        { name: 'Deshabhimani', url: 'https://epaper.deshabhimani.com/' },
+        { name: 'Madhyamam', url: 'https://epaper.madhyamam.com/' },
+        { name: 'Thejas', url: 'https://epaper.thejasnews.com/' },
+        { name: 'Kerala Kaumudi', url: 'https://epaper.keralakaumudi.com/' },
+        { name: 'Malayala Manorama', url: 'https://epaper.manoramaonline.com/' },
+        { name: 'Janmabhumi', url: 'https://epaper.janmabhumi.com/' },
+        { name: 'Swarajya', url: 'https://epaper.swarajyamag.com/' },
+        { name: 'Deshabhimani', url: 'https://epaper.deshabhimani.com/' },
+        { name: 'Vijayavani', url: 'https://epaper.vijayavani.net/' },
+        { name: 'Indiavision', url: 'https://epaper.indiavision.com/' }
+      ],
+      oriyaNewspapers: [
+        { name: 'Sambad', url: 'https://epaper.sambad.in/' },
+        { name: 'Prameya News7', url: 'https://epaper.prameyanews7.com/' },
+        { name: 'Dinalipi', url: 'https://epaper.dinalipi.com/' },
+        { name: 'The Samaja', url: 'https://epaper.thesamaja.com/' },
+        { name: 'Odisha TV', url: 'https://epaper.odishatv.in/' },
+        { name: 'Kalinga TV', url: 'https://epaper.kalingatv.com/' },
+        { name: 'Taranga', url: 'https://epaper.tarangaonline.com/' },
+      ],
+      urduNewspapers: [
+        { name: 'Jang', url: 'https://epaper.jang.com.pk/' },
+        { name: 'The News', url: 'https://epaper.thenews.com.pk/' },
+        { name: 'Nawa-i-Waqt', url: 'https://epaper.nawaiwaqt.com.pk/' },
+        { name: 'Daily Express', url: 'https://epaper.express.pk/' },
+        { name: 'Dawn', url: 'https://epaper.dawn.com/' },
+        { name: 'Roznama Ummat', url: 'https://epaper.ummat.net/' },
+        { name: 'Daily Pakistan', url: 'https://epaper.daily-pakistan.com.pk/' },
+        { name: 'Daily Khabrain', url: 'https://epaper.khabrain.com.pk/' },
+        { name: 'Daily Mashriq', url: 'https://epaper.mashriqtv.pk/' },
+        { name: 'Daily Jazeera', url: 'https://epaper.jazeera.pk/' },
+        { name: 'Daily Awam', url: 'https://epaper.awam.pk/' },
+        { name: 'Samaa TV', url: 'https://epaper.samaa.tv/' }
+      ],
+      marathiNewspapers: [
+        { name: 'Sakal', url: 'https://epaper.sakal.com/' },
+        { name: 'Loksatta', url: 'https://epaper.loksatta.com/' },
+        { name: 'Lokmat', url: 'https://epaper.lokmat.com/' },
+        { name: 'Maharashtra Times', url: 'https://epaper.maharashtratimes.com/' },
+        { name: 'Pudhari', url: 'https://epaper.pudhari.com/' },
+        { name: 'Tarun Bharat', url: 'https://epaper.tarunbharat.com/' },
+        { name: 'Deshdoot', url: 'https://epaper.deshdoot.com/' },
+        { name: 'Jai Maharashtra', url: 'https://epaper.jaimaaharashtra.com/' },
+        { name: 'Daily Pudhari', url: 'https://epaper.pudhari.com/' },
+        { name: 'Navakal', url: 'https://epaper.navakal.in/' },
+        { name: 'Saamana', url: 'https://epaper.saamana.com/' },
+        { name: 'Sakal Times', url: 'https://epaper.sakaltimes.com/' },
+        { name: 'India News', url: 'https://epaper.indianews.com/' },
+        { name: 'Mumbai Mirror', url: 'https://epaper.mumbaimirror.com/' },
+        { name: 'ABP Majha', url: 'https://epaper.abpmajha.com/' },
+        { name: 'Times of India (Marathi)', url: 'https://epaper.timesofindia.com/' },
+        { name: 'Mumbai Samachar', url: 'https://epaper.mumbaisamachar.com/' },
+        { name: 'Daily Lokshahir', url: 'https://epaper.dailylokshahir.com/' },
+        { name: 'Rashtriya Sahara', url: 'https://epaper.rashtriyasahara.com/' },
+        { name: 'Maharashtra Today', url: 'https://epaper.maharashtratoday.com/' }
+      ],
+      kannadaNewspapers: [
+        { name: 'Vijay Karnataka', url: 'https://epaper.vijaykarnataka.com/' },
+        { name: 'Prajavani', url: 'https://epaper.prajavani.net/' },
+        { name: 'Deccan Herald', url: 'https://epaper.deccanherald.com/' },
+        { name: 'The Hindu (Kannada)', url: 'https://epaper.thehindu.com/' },
+        { name: 'Udayavani', url: 'https://epaper.udayavani.com/' },
+        { name: 'Kannada Prabha', url: 'https://epaper.kannadaprabha.com/' },
+        { name: 'Hosa Digantha', url: 'https://epaper.hosadigantha.com/' },
+        { name: 'Samyukta Karnataka', url: 'https://epaper.samyuktakarnataka.com/' },
+        { name: 'Praja TV', url: 'https://epaper.prajatv.com/' },
+        { name: 'Star of Mysore', url: 'https://epaper.starofmysore.com/' },
+        { name: 'Karnataka Today', url: 'https://epaper.karnatakatoday.com/' },
+        { name: 'Mysuru Mirror', url: 'https://epaper.mysurumirror.com/' },
+        { name: 'New Indian Express (Kannada)', url: 'https://epaper.newindianexpress.com/' },
+        { name: 'Sudha', url: 'https://epaper.sudha.com/' },
+        { name: 'Vartha Bharati', url: 'https://epaper.varthabharati.in/' },
+        { name: 'Karnataka Janashree', url: 'https://epaper.karnatakajanashree.com/' },
+        { name: 'Deshabhimani', url: 'https://epaper.deshabhimani.com/' },
+        { name: 'Prajavani (Mangalore)', url: 'https://epaper.prajavani.net/' },
+        { name: 'Esha', url: 'https://epaper.esha.com/' }
+      ],
+      bengaliNewspapers: [
+        { name: 'Anandabazar Patrika', url: 'https://epaper.anandabazar.com/' },
+        { name: 'Bartaman', url: 'https://epaper.bartamanpatrika.com/' },
+        { name: 'The Statesman', url: 'https://epaper.thestatesman.com/' },
+        { name: 'Prothom Alo', url: 'https://epaper.prothomalo.com/' },
+        { name: 'Ei Samay', url: 'https://epaper.eisamay.com/' },
+        { name: 'Dainik Jugantar', url: 'https://epaper.jugantor.com/' },
+        { name: 'Kaler Kantho', url: 'https://epaper.kalerkantho.com/' },
+        { name: 'Daily Star', url: 'https://epaper.thedailystar.com/' },
+        { name: 'Sangbad Pratidin', url: 'https://epaper.sangbadpratidin.com/' },
+        { name: 'Aajkaal', url: 'https://epaper.aajkaal.com/' },
+        { name: 'Dainik Azadi', url: 'https://epaper.dainikazadi.com/' },
+        { name: 'Bangladesh Pratidin', url: 'https://epaper.bd-pratidin.com/' },
+        { name: 'Pratidin', url: 'https://epaper.pratidin.in/' },
+        { name: 'Anandabazar Patrika', url: 'https://epaper.anandabazar.com/' },
+        { name: 'Janakantha', url: 'https://epaper.janakantha.com/' },
+        { name: 'Bengal Post', url: 'https://epaper.bengalpost.in/' },
+        { name: 'Ganashakti', url: 'https://epaper.ganashakti.com/' },
+        { name: 'Ajkal', url: 'https://epaper.ajkal.com/' },
+        { name: 'Bengal News', url: 'https://epaper.bengalnews.com/' }
+      ],
+      gujarathiNewspapers: [
+        { name: 'Gujarat Samachar', url: 'https://epaper.gujaratsamachar.com/' },
+        { name: 'Sandesh', url: 'https://epaper.sandesh.com/' },
+        { name: 'Divya Bhaskar', url: 'https://epaper.divyabhaskar.com/' },
+        { name: 'Gujarat Mitra', url: 'https://epaper.gujaratmitra.com/' },
+        { name: 'Indian Express (Gujarati)', url: 'https://epaper.indianexpress.com/' },
+        { name: 'Times of India (Gujarati)', url: 'https://epaper.timesofindia.com/' },
+        { name: 'NavGujarat Samay', url: 'https://epaper.navgujaratsamay.com/' },
+        { name: 'Sambhaav News', url: 'https://epaper.sambhaavnews.com/' },
+        { name: 'Gujarat Guardian', url: 'https://epaper.gujaratguardian.com/' },
+        { name: 'Vadodara Times', url: 'https://epaper.vadodaratimes.com/' },
+        { name: 'Khaskhabar', url: 'https://epaper.khaskhabar.com/' },
+        { name: 'DNA India', url: 'https://epaper.dnaindia.com/' },
+        { name: 'Akila', url: 'https://epaper.akila.com/' },
+        { name: 'Navbharat Times', url: 'https://epaper.navbharattimes.com/' },
+        { name: 'Bharat Times', url: 'https://epaper.bharattimes.com/' },
+        { name: 'Indo-Asian News', url: 'https://epaper.indoasiannews.com/' },
+        { name: 'Desh Gujarat', url: 'https://epaper.deshgujarat.com/' },
+        { name: 'Gujarat Today', url: 'https://epaper.gujaratoday.com/' },
+        { name: 'Gujarati Prabha', url: 'https://epaper.gujarathprabha.com/' }
+      ],
+      punjabiNewspapers: [
+        { name: 'Ajit', url: 'https://epaper.ajitjalandhar.com/' },
+        { name: 'Punjabi Tribune', url: 'https://epaper.punjabitribune.com/' },
+        { name: 'Daily Punjab', url: 'https://epaper.daily-punjab.com/' },
+        { name: 'The Tribune', url: 'https://epaper.tribuneindia.com/' },
+        { name: 'Rozana Spokesman', url: 'https://epaper.rozanspokesman.com/' },
+        { name: 'Jagbani', url: 'https://epaper.jagbani.in/' },
+        { name: 'Hindi Milap', url: 'https://epaper.hindimilap.com/' },
+        { name: 'Bharat Times', url: 'https://epaper.bharattimes.com/' },
+        { name: 'The Hindustan Times', url: 'https://epaper.hindustantimes.com/' },
+        { name: 'Punjab Kesari', url: 'https://epaper.punjabkesari.com/' },
+        { name: 'Panjab Times', url: 'https://epaper.panjabtimes.com/' },
+        { name: 'Daily Ajit', url: 'https://epaper.ajitdaily.com/' },
+        { name: 'Daily Punjab Kesari', url: 'https://epaper.dailypunjabkesari.com/' },
+        { name: 'Khabar Punjabi', url: 'https://epaper.khabarpunjabi.com/' },
+        { name: 'Punjabi News', url: 'https://epaper.punjabinews.com/' },
+        { name: 'Sikh24', url: 'https://epaper.sikh24.com/' },
+        { name: 'Jagran', url: 'https://epaper.jagran.com/' },
+        { name: 'Dainik Jagran', url: 'https://epaper.jagran.com/' },
+        { name: 'Madhur Punjabi', url: 'https://epaper.madhurpunjabi.com/' }
+      ],
+      kokaniNewspapers: [
+        { name: 'Tarun Bharat', url: 'https://epaper.tarunbharat.com/' },
+        { name: 'Hindustan Times', url: 'https://epaper.hindustantimes.com/' },
+        { name: 'Gomantak', url: 'https://epaper.gomantak.com/' },
+        { name: 'Navprabha', url: 'https://epaper.navprabha.com/' },
+        { name: 'Goa Times', url: 'https://epaper.goatimes.com/' },
+        { name: 'Rashtriya Sahara', url: 'https://epaper.rashtriyasahara.com/' },
+        { name: 'Vishwast News', url: 'https://epaper.vishwastnews.com/' },
+        { name: 'Daily Goan', url: 'https://epaper.dailygoan.com/' },
+        { name: 'Dainik Gomantak', url: 'https://epaper.dainikgomantak.com/' },
+        { name: 'Times of India (Goa)', url: 'https://epaper.timesofindia.com/' },
+        { name: 'Gomantak Times', url: 'https://epaper.gomantaktimes.com/' },
+        { name: 'Prachi Times', url: 'https://epaper.prachitimes.com/' },
+        { name: 'Goan Observer', url: 'https://epaper.goanobserver.com/' },
+        { name: 'Pioneer Goa', url: 'https://epaper.pioneergoa.com/' },
+        { name: 'Sakaal Times (Goa)', url: 'https://epaper.sakaaltimes.com/' },
+        { name: 'Navhind Times', url: 'https://epaper.navhindtimes.com/' },
+        { name: 'The Hindu (Goa)', url: 'https://epaper.thehindu.com/' },
+        { name: 'Mumbai Mirror', url: 'https://epaper.mumbaimirror.com/' },
+        { name: 'Goa Today', url: 'https://epaper.goatoday.com/' }
+      ],
+      assammeseNewspapers: [
+        { name: 'Assam Tribune', url: 'https://epaper.assamtribune.com/' },
+        { name: 'Dainik Janambhumi', url: 'https://epaper.janambhumi.com/' },
+        { name: 'Sentinel Assam', url: 'https://epaper.sentinelassam.com/' },
+        { name: 'Pratidin Time', url: 'https://epaper.pratidintime.com/' },
+        { name: 'Asomiya Khabar', url: 'https://epaper.asomiyakhabar.com/' },
+        { name: 'Guwahati Times', url: 'https://epaper.guwahattitimes.com/' },
+        { name: 'The Assam Tribune', url: 'https://epaper.assamtribune.com/' },
+        { name: 'Niyomiya Barta', url: 'https://epaper.niyomiyabarta.com/' },
+        { name: 'Sadin', url: 'https://epaper.sadin.com/' },
+        { name: 'Dainik Pratidin', url: 'https://epaper.pratidin.com/' },
+        { name: 'The Telegraph', url: 'https://epaper.telegraphindia.com/' },
+        { name: 'Amar Asom', url: 'https://epaper.amarasom.com/' },
+        { name: 'Sangbad Pratidin', url: 'https://epaper.sangbadpratidin.com/' },
+        { name: 'Bodo Times', url: 'https://epaper.bodotimes.com/' },
+        { name: 'Time8', url: 'https://epaper.time8.in/' },
+        { name: 'The North East Today', url: 'https://epaper.thenortheasttoday.com/' },
+        { name: 'Guwahati News', url: 'https://epaper.guwahatinews.com/' },
+        { name: 'The Sentinel', url: 'https://epaper.sentinelassam.com/' },
+        { name: 'Jouban', url: 'https://epaper.jouban.com/' }
+      ],
+      bodoNewspapers: [
+        { name: 'Bodo Times', url: 'https://epaper.bodotimes.com/' },
+        { name: 'The Bodo News', url: 'https://epaper.thebodonews.com/' },
+        { name: 'The Assam Tribune', url: 'https://epaper.assamtribune.com/' },
+        { name: 'Pratidin Time', url: 'https://epaper.pratidintime.com/' },
+        { name: 'Sentinel Assam', url: 'https://epaper.sentinelassam.com/' },
+        { name: 'Dainik Janambhumi', url: 'https://epaper.janambhumi.com/' },
+        { name: 'The Telegraph', url: 'https://epaper.telegraphindia.com/' },
+        { name: 'Assam Tribune', url: 'https://epaper.assamtribune.com/' },
+        { name: 'Guwahati Times', url: 'https://epaper.guwahattitimes.com/' },
+        { name: 'Time8', url: 'https://epaper.time8.in/' },
+        { name: 'Niyomiya Barta', url: 'https://epaper.niyomiyabarta.com/' },
+        { name: 'Sadin', url: 'https://epaper.sadin.com/' },
+        { name: 'Asomiya Khabar', url: 'https://epaper.asomiyakhabar.com/' },
+        { name: 'Pratidin Time', url: 'https://epaper.pratidintime.com/' },
+        { name: 'The Assam Tribune', url: 'https://epaper.assamtribune.com/' },
+        { name: 'Sentinel Assam', url: 'https://epaper.sentinelassam.com/' },
+        { name: 'The North East Today', url: 'https://epaper.thenortheasttoday.com/' },
+        { name: 'Guwahati News', url: 'https://epaper.guwahatinews.com/' }
+      ],
+      
+    };
+  }
+}
+
+
+// Define a type for the newspaper object
+interface Newspaper {
+  name: string;
+  url: string;
+}
+
+
