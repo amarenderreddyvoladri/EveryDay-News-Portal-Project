@@ -198,10 +198,43 @@ Online-News-Portal/
 ---
 
 ## Screenshots
+
 ### Home Page
-![Home Page Screenshot](src/assets/Screenshorts/homepage.jpg)
-### News Categories
-![News Categories Screenshot](https://via.placeholder.com/800x400?text=News+Categories)
+![Home Page Screenshot](src/assets/Screenshorts/homepage.png)
+
+### News Category Add
+![News Category Add Screenshot](src/assets/Screenshorts/news_category_add.png)
+
+### News Category List
+![News Category List Screenshot](src/assets/Screenshorts/news_category_list.png)
+
+### Online News Articles
+![Online News Articles Screenshot](src/assets/Screenshorts/online_news_artciles.png)
+
+### Portfolio
+![Portfolio Screenshot](src/assets/Screenshorts/portfolio.png)
+
+### Subscriber List
+![Subscriber List Screenshot](src/assets/Screenshorts/subscriber_list.png)
+
+### YouTube News
+![YouTube News Screenshot](src/assets/Screenshorts/youtube_news.png)
+
+### Add News Articles
+![Add News Articles Screenshot](src/assets/Screenshorts/add_news_articles.jpeg)
+
+### Contact List
+![Contact List Screenshot](src/assets/Screenshorts/contact_list.png)
+
+### Contact Page
+![Contact Page Screenshot](src/assets/Screenshorts/contact_page.png)
+
+### Daily News Papers
+![Daily News Papers Screenshot](src/assets/Screenshorts/daily_news_papers.png)
+
+### News Articles List
+![News Articles List Screenshot](src/assets/Screenshorts/news_articles_list.png)
+
 
 ---
 
